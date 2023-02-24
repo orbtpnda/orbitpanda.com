@@ -19,19 +19,18 @@
           <div
             class="relative flex space-x-3 items-center text-2xl text-slate-900 dark:text-white"
           >
-            <span class="inline-block w-[25px] bg-secondary-500 h-[1px]"></span
-            ><span>Coming soon</span>
+            <!-- <span class="inline-block w-[25px] bg-secondary-500 h-[1px]"></span -->
+            <span> 🛰️ Orbit soon  </span>
           </div>
           <div
             class="xl:text-[70px] xl:leading-[70px] text-4xl font-semibold text-slate-900 dark:text-white"
           >
-            Get notified when we launch
+            Get your WordPress in under 5 seconds.
           </div>
           <p
-            class="font-normal text-slate-600 dark:text-slate-300 max-w-[400px]"
+            class="font-normal text-slate-600 dark:text-slate-300 max-w-[600px]"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+          Join our early access list and be the first to know when our app launches. Exclusives access are waiting.
           </p>
           <div class="bg-white flex items-center px-3 rounded">
             <input
@@ -96,14 +95,7 @@
                 <a
                   href="#"
                   class="text-slate-500 dark:text-slate-400 text-sm transition duration-150 hover:text-slate-900"
-                  >Faq</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-slate-500 dark:text-slate-400 text-sm transition duration-150 hover:text-slate-900"
-                  >Email us</a
+                  >FAQ</a
                 >
               </li>
             </ul>
