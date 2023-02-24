@@ -116,9 +116,29 @@
 
 <script setup>
 const dark = ref(false);
-</script>
 
-<script setup></script>
+useHead({
+  title: "Effortlessly Deploy WordPress Sites",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Deploy WordPress quickly and effortlessly with OrbitPanda. Our app streamlines the deployment process, allowing you to get your site up and running in seconds.",
+    },
+    {
+      name: "keywords",
+      content:
+        "WordPress deployment, Fast deployment, Easy WordPress installation, WordPress site builder, WordPress management, WordPress automation",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://orbitpanda.com",
+    },
+  ],
+});
+</script>
 
 <style lang="scss" scoped>
 .social-link {
