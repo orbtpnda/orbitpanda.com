@@ -4,7 +4,13 @@
       <div class="flex flex-wrap justify-between items-center py-6 container">
         <div>
           <router-link to="/">
-            <img src="/images/logo/logo.svg" alt="" v-if="!dark" />
+            <img
+              src="/images/logo/logo-orbitpanda.png"
+              alt=""
+              width="200"
+              height="45"
+              v-if="!dark"
+            />
             <img src="/images/logo/logo-white.svg" alt="" v-if="dark" />
           </router-link>
         </div>
@@ -20,7 +26,7 @@
             class="relative flex space-x-3 items-center text-2xl text-slate-900 dark:text-white"
           >
             <!-- <span class="inline-block w-[25px] bg-secondary-500 h-[1px]"></span -->
-            <span> 🛰️ Orbit soon  </span>
+            <span> 🛰️ Orbit soon </span>
           </div>
           <div
             class="xl:text-[70px] xl:leading-[70px] text-4xl font-semibold text-slate-900 dark:text-white"
@@ -30,7 +36,8 @@
           <p
             class="font-normal text-slate-600 dark:text-slate-300 max-w-[600px]"
           >
-          Join our early access list and be the first to know when our app launches. Exclusives access are waiting.
+            Join our early access list and be the first to know when our app
+            launches. Exclusives access are waiting.
           </p>
           <div class="bg-white flex items-center px-3 rounded">
             <input
