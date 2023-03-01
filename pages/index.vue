@@ -26,12 +26,12 @@
             class="relative flex space-x-3 items-center text-2xl text-slate-900 dark:text-white"
           >
             <!-- <span class="inline-block w-[25px] bg-secondary-500 h-[1px]"></span -->
-            <span> 🛰️ Orbit soon </span>
+            <span> 🛰️ Orbit soon.. </span>
           </div>
           <div
             class="xl:text-[70px] xl:leading-[70px] text-4xl font-semibold text-slate-900 dark:text-white"
           >
-            Get your WordPress in under 5 seconds.
+            Get Your WordPress Site Up and Running Fast.
           </div>
           <p
             class="font-normal text-slate-600 dark:text-slate-300 max-w-[600px]"
@@ -82,11 +82,6 @@
                   <Icon icon="icomoon-free:linkedin2"
                 /></a>
               </li>
-              <li>
-                <a href="#" class="social-link">
-                  <Icon icon="icomoon-free:google"
-                /></a>
-              </li>
             </ul>
           </div>
           <div>
@@ -117,12 +112,12 @@
 const dark = ref(false);
 
 useHead({
-  title: "Effortlessly Deploy WordPress Sites",
+  title: "Easiest Way to Deploy WordPress", 
   meta: [
     {
       name: "description",
       content:
-        "Deploy WordPress quickly and effortlessly with OrbitPanda. Our app streamlines the deployment process, allowing you to get your site up and running in seconds.",
+        "Deploy WordPress quickly and simply with OrbitPanda. Our app streamlines the deployment process, allowing you to get your site up and running in seconds.",
     },
     {
       name: "keywords",
