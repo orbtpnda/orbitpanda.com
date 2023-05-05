@@ -48,7 +48,7 @@
             />
             <div class="flex-none">
               <button
-                @click="formData.email.value && onSubmit()"
+                @click="onSubmit"
                 type="button"
                 class="btn btn-dark btn-sm px-6"
               >
@@ -151,8 +151,12 @@ useHead({
 });
 
 const onSubmit = async () => {
+  if (!formData.email) {
+    $toast.error("Please provide us email address");
+    return false;
+  }
   try {
-    await $fetch($url, {
+    await $fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "text/plain;charset=utf-8",
@@ -161,8 +165,10 @@ const onSubmit = async () => {
     });
     $toast.success("Your request has been submited");
   } catch (error) {
-    $toast.error(error.statusMessage);
+    $toast.error("Something error. please check your input");
   }
+
+  formData.email.value = "";
 };
 </script>
 
