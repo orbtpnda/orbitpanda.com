@@ -41,12 +41,17 @@
           </p>
           <div class="bg-white flex items-center px-3 rounded">
             <input
-              type="text"
+              type="email"
               placeholder="Enter your email"
+              v-model="formData.email"
               class="flex-1 bg-transparent h-full block w-full py-6 placeholder:text-secondary-500 text-base focus:outline-none focus:ring-0"
             />
             <div class="flex-none">
-              <button type="button" class="btn btn-dark btn-sm px-6">
+              <button
+                @click="formData.email.value && onSubmit()"
+                type="button"
+                class="btn btn-dark btn-sm px-6"
+              >
                 Notify me
               </button>
             </div>
@@ -109,10 +114,15 @@
 </template>
 
 <script setup>
+const formData = ref({});
+const { $toast } = useNuxtApp();
+const url =
+  "https://script.google.com/macros/s/AKfycbxl6iWCmXyt215l-rp3MLJM4ZvJ69llIAuw_KNoqTaXrXiByAFEAJvwi56E_FAjDsYf-w/exec";
+
 const dark = ref(false);
 
 useHead({
-  title: "Easiest Way to Deploy WordPress", 
+  title: "Easiest Way to Deploy WordPress",
   meta: [
     {
       name: "description",
@@ -131,7 +141,29 @@ useHead({
       href: "https://orbitpanda.com",
     },
   ],
+  script: [
+    {
+      src: "https://www.google.com/recaptcha/api.js",
+      async: true,
+      defer: true,
+    },
+  ],
 });
+
+const onSubmit = async () => {
+  try {
+    await $fetch($url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+      body: JSON.stringify(formData.value),
+    });
+    $toast.success("Your request has been submited");
+  } catch (error) {
+    $toast.error(error.statusMessage);
+  }
+};
 </script>
 
 <style lang="scss" scoped>
