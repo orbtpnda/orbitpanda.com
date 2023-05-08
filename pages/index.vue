@@ -39,23 +39,7 @@
             Join our early access list and be the first to know when our app
             launches. Exclusives access are waiting.
           </p>
-          <div class="bg-white flex items-center px-3 rounded">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              v-model="formData.email"
-              class="flex-1 bg-transparent h-full block w-full py-6 placeholder:text-secondary-500 text-base focus:outline-none focus:ring-0"
-            />
-            <div class="flex-none">
-              <button
-                @click="onSubmit"
-                type="button"
-                class="btn btn-dark btn-sm px-6"
-              >
-                Notify me
-              </button>
-            </div>
-          </div>
+          <FormNewsLetter />
           <div class="text-sm text-slate-500 dark:text-slate-400">
             *Don’t worry we will not spam you :)
           </div>
@@ -114,11 +98,6 @@
 </template>
 
 <script setup>
-const formData = ref({});
-const { $toast } = useNuxtApp();
-const url =
-  "https://script.google.com/macros/s/AKfycbxl6iWCmXyt215l-rp3MLJM4ZvJ69llIAuw_KNoqTaXrXiByAFEAJvwi56E_FAjDsYf-w/exec";
-
 const dark = ref(false);
 
 useHead({
@@ -140,6 +119,11 @@ useHead({
       rel: "canonical",
       href: "https://orbitpanda.com",
     },
+    {
+      rel: "stylesheet",
+      type: "text/css",
+      href: "https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap",
+    },
   ],
   script: [
     {
@@ -149,27 +133,6 @@ useHead({
     },
   ],
 });
-
-const onSubmit = async () => {
-  if (!formData.email) {
-    $toast.error("Please provide us email address");
-    return false;
-  }
-  try {
-    await $fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8",
-      },
-      body: JSON.stringify(formData.value),
-    });
-    $toast.success("Your request has been submited");
-  } catch (error) {
-    $toast.error("Something error. please check your input");
-  }
-
-  formData.email.value = "";
-};
 </script>
 
 <style lang="scss" scoped>

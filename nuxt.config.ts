@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@nuxtjs/robots"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/robots"],
 
   app: {
     head: {
@@ -26,12 +26,12 @@ export default defineNuxtConfig({
     injectPosition: 0,
   },
 
-  googleFonts: {
-    families: {
-      Inter: {
-        wght: [300, 400, 500, 600, 700],
-      },
-    },
-    display: "swap",
-  },
+  // googleFonts: {
+  //   families: {
+  //     Inter: {
+  //       wght: [300, 400, 500, 600, 700],
+  //     },
+  //   },
+  //   display: "swap",
+  // },
 });
