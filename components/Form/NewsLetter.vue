@@ -40,6 +40,6 @@ const onSubmit = async () => {
     $toast.error("Something error. please check your input");
   }
 
-  formData.value = "";
+  formData.value.email = "";
 };
 </script>
